@@ -9,7 +9,7 @@ const loadModule = (comMod) => (componentModule) => {
 export default function createRoutes() {
 
   return [
-    /*{
+    {
        path: '/',
        name: 'home',
        getComponent(nextState, comMod) {
@@ -17,7 +17,16 @@ export default function createRoutes() {
            .then(loadModule(comMod))
            .catch(errorLoading);
        },
-     },*/
+     },
+     {
+       path: '/dashboard',
+       name: 'Dashboard',
+        getComponent(nextState, comMod) {
+          import('containers/Dashboard')
+            .then(loadModule(comMod))
+            .catch(errorLoading);
+        },
+      },
      {
       path: '*',
       name: 'notfound',
