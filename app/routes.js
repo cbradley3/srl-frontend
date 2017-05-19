@@ -19,8 +19,44 @@ export default function createRoutes() {
        },
      },
      {
+        path: '/about',
+        name: 'about',
+        getComponent(nextState, comMod) {
+          import('containers/About')
+            .then(loadModule(comMod))
+            .catch(errorLoading);
+        },
+      },
+      {
+         path: '/news',
+         name: 'news',
+         getComponent(nextState, comMod) {
+           import('containers/News')
+             .then(loadModule(comMod))
+             .catch(errorLoading);
+         },
+       },
+       {
+          path: '/contact',
+          name: 'contact',
+          getComponent(nextState, comMod) {
+            import('containers/Contact')
+              .then(loadModule(comMod))
+              .catch(errorLoading);
+          },
+        },
+        {
+           path: '/shop',
+           name: 'shop',
+           getComponent(nextState, comMod) {
+             import('containers/Shop')
+               .then(loadModule(comMod))
+               .catch(errorLoading);
+           },
+         },
+     {
        path: '/dashboard',
-       name: 'Dashboard',
+       name: 'dashboard',
         getComponent(nextState, comMod) {
           import('containers/Dashboard')
             .then(loadModule(comMod))
