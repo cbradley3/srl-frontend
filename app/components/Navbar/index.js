@@ -38,7 +38,7 @@ class Navbar extends React.PureComponent {
 
   const nav={
     display:"flex",
-    flexDirection:"column",
+    flexDirection:"row",
     alignSelf:'center'
     }
 
@@ -82,91 +82,95 @@ class Navbar extends React.PureComponent {
       )
     }
   }
-  const navStyle={
-    margin:"0",
-    padding:"10px",
-    width:"100%",
-    fontSize:"2em",
-    fontFamily:"Open Sans",
-    fontStyle:"light",
-    fontWeight:"400",
-    borderTop:"2px solid #000000",
-    borderBottom:"1px solid #000000",
-    textAlign:"center",
-                   }
-
-  const navStyle2={
-    display:"flex",
-    flexDirection:"row",
-    justifyContent:"center",
-    height:"100px",
-    alignItems:"center",
-    textDecoration:"none",
-    color:"#000000",
-    fontSize:".90em",
-    fontFamily:"Open Sans",
-    fontStyle:"light",
-    fontWeight:"400",
-    textAlign:"right",
-    textTransform:"uppercase",
-    letterSpacing:"2px",
-  }
-  const headStyle={
-    display:"flex",
-    flexDirection:"column",
-    justifyContent:"center"
-  }
-  const logoStyle={
-    margin:"0 auto",
-    marginTop:"20px",
-    height:"auto",
-    width:"150px"
-  }
-  const linkStyle2={
-    display:"flex",
-    flexDirection:"row",
-    paddingRight:"30px",
-    textDecoration:"none",
-    color:"#000000",
-    fontSize:"1em",
-    fontFamily:"Open Sans",
-    fontStyle:"light",
-    fontWeight:"400",
-    textAlign:"right",
-    textTransform:"uppercase",
-    letterSpacing:"2px",
-  }
-    const divStyle2Mobile={
-      width:"100%",
-      height:"auto",
-      display:"flex",
-      flexDirection:"column",
-      justifyContent:"center center",
 
 
 
-  }
-  var dashLink = <Link style={linkStyle2} to="/Dashboard">Dashboard</Link>;
-  var signUpLink = <Link to="/SignUp" style={linkStyle2}>Sign Up</Link>;
-  var signInLink = <Link to="/SignIn" style={linkStyle2}>Sign In</Link>;
-
-  if(this.state.token === null){
-    dashLink="";
-  }
-  else{
-    signUpLink="";
-    signInLink="";
-    if(this.state.user.roleID !== 1){
-      dashLink="";
-    }
-  }
 
   render() {
+
+    const navStyle={
+      margin:"0",
+      padding:"10px",
+      width:"100%",
+      fontSize:"2em",
+      fontFamily:"Open Sans",
+      fontStyle:"light",
+      fontWeight:"400",
+      borderTop:"2px solid #000000",
+      borderBottom:"1px solid #000000",
+      textAlign:"center",
+       }
+
+    const navStyle2={
+      display:"flex",
+      flexDirection:"row",
+      justifyContent:"center",
+      height:"100px",
+      alignItems:"center",
+      textDecoration:"none",
+      color:"#000000",
+      fontSize:".90em",
+      fontFamily:"Open Sans",
+      fontStyle:"light",
+      fontWeight:"400",
+      textAlign:"right",
+      textTransform:"uppercase",
+      letterSpacing:"2px",
+    }
+    const headStyle={
+      display:"flex",
+      flexDirection:"row",
+      justifyContent:"center"
+    }
+    const logoStyle={
+      marginTop:"20px",
+      height:"75px",
+      width:"auto"
+    }
+    const linkStyle2={
+      display:"flex",
+      flexDirection:"row",
+      paddingRight:"30px",
+      textDecoration:"none",
+      color:"#000000",
+      fontSize:"1em",
+      fontFamily:"Open Sans",
+      fontStyle:"light",
+      fontWeight:"400",
+      textAlign:"right",
+      textTransform:"uppercase",
+      letterSpacing:"2px",
+    }
+      const divStyle2Mobile={
+        width:"100%",
+        height:"auto",
+        display:"flex",
+        flexDirection:"row",
+        justifyContent:"center center",
+
+
+
+    }
+    var dashLink = <Link style={linkStyle2} to="/Dashboard">Dashboard</Link>;
+    var signUpLink = <Link to="/SignUp" style={linkStyle2}>Sign Up</Link>;
+    var signInLink = <Link to="/SignIn" style={linkStyle2}>Sign In</Link>;
+
+    if(this.state.token === null){
+      dashLink="";
+    }
+    else{
+      signUpLink="";
+      signInLink="";
+      if(this.state.user.roleID !== 1){
+        dashLink="";
+      }
+    }
+
     return (
       <div style={divStyle2Mobile}>
         <Responsive minDeviceWidth={1024}>
           <div style={headStyle}>
-            <img style={logoStyle} src="http://h4z.it/Image/f02f70_llustration3.png"/>
+            <img style={logoStyle} src="http://h4z.it/Image/681c4a_SRL_logo.png"/>
             <nav style={navStyle2}>
               <Link style={linkStyle2} to= "/"> Home </Link>
               <Link style={linkStyle2} to= "/About"> About </Link>
@@ -183,7 +187,7 @@ class Navbar extends React.PureComponent {
 
         <Responsive maxDeviceWidth={1023}>
           <div style={headStyle}>
-            <img style={logoStyle} src="http://h4z.it/Image/f02f70_llustration3.png"/>
+            <img style={logoStyle} src="http://h4z.it/Image/681c4a_SRL_logo.png"/>
           <nav style={navStyle2}>
             <IconButton onTouchTap={this.handleMenu}> <MenuIcon/> </IconButton>
           </nav>
