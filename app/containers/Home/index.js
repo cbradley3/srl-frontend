@@ -40,60 +40,61 @@ export default class Home extends React.PureComponent {
     }
     const divStyle2Mobile={
       width:"100%",
-      height:"auto",
+      display:"flex",
+      flexDirection:"column",
+      alignItems:"center",
+      justifyContent:"center",
 
     }
     const divStyle3={
       width:"100%",
-      height:"600px",
-      background:"url(http://h4z.it/Image/35e950_DSC_0266rev.jpg)",
-      backgroundSize:"cover",
-      backgroundAttachment:"fixed",
-      backgroundPosition:"center",
-      backgroundRepeat:"no-repeat"
+      height:"200px",
+      background:"rgba(109, 110, 114, 1.00)",
+      display:"flex",
+      flexDirection:"row",
+      alignItems:"center",
+      justifyContent:"center",
+      marginTop:"80px",
     }
     const divStyle3Mobile={
       width:"100%",
-      height:"500px",
-      background:"url(http://h4z.it/Image/35e950_DSC_0266rev.jpg)",
-      backgroundSize:"cover",
-      backgroundAttachment:"fixed",
-      backgroundPosition:"center",
-      backgroundRepeat:"no-repeat"
+      height:"200px",
+      background:"rgba(109, 110, 114, 1.00)",
+      display:"flex",
+      flexDirection:"column",
+      alignItems:"center",
+      justifyContent:"center",
+      marginTop:"80px",
     }
     const divStyle4={
       width:"100%",
-      height:"800px",
+      height:"600px",
       background:"rgba(255, 255, 255, 1.00)",
       display:"flex",
       flexDirection:"row",
-      justifyContent:"center",
     }
     const divStyle4Mobile={
       width:"100%",
-      height:"800px",
+      height:"600px",
       background:"rgba(255, 255, 255, 1.00)",
       display:"flex",
-      flexDirection:"row",
+      flexDirection:"column",
       justifyContent:"center",
     }
     const divStyle5={
       width:"100%",
       height:"600px",
-      background:"url(http://h4z.it/Image/4bd89e_da443c74crev.jpg)",
-      backgroundSize:"cover",
-      backgroundAttachment:"fixed",
-      backgroundPosition:"center",
-      backgroundRepeat:"no-repeat",
+      background:"rgba(255, 255, 255, 1.00)",
+      display:"flex",
+      flexDirection:"row",
     }
     const divStyle5Mobile={
       width:"100%",
-      height:"450px",
-      background:"url(http://h4z.it/Image/4bd89e_da443c74crev.jpg)",
-      backgroundSize:"cover",
-      backgroundAttachment:"fixed",
-      backgroundPosition:"center",
-      backgroundRepeat:"no-repeat",
+      height:"600px",
+      background:"rgba(255, 255, 255, 1.00)",
+      display:"flex",
+      flexDirection:"column",
+      justifyContent:"center",
     }
     const divStyle6={
       width:"100%",
@@ -160,16 +161,16 @@ export default class Home extends React.PureComponent {
       marginTop:"30px",
       padding:".5vw",
       fontSize:"0",
-      display:"-ms-flexbox",
-      msFlexboxlexWrap:"wrap",
-      msFlexDirection:"column",
+      FlexboxlexWrap:"wrap",
+      FlexDirection:"column",
       WebkitFlexFlow:"column",
       flexFlow:"column",
-      display:"-webkit-box",
+      display:"webkit-box",
       display:"flex",
     }
     const photo={
-      width: "33%",
+      width:"25%",
+      height:"auto",
     }
       const photoMobile={
         WebkitBoxFlex:"auto",
@@ -180,36 +181,62 @@ export default class Home extends React.PureComponent {
         margin:".5vw",
         marginBottom:"20px"
     }
-    const headerDivImg={
-      width:"100%",
-      height:"auto",
-    }
     const buttonBox={
       color:"rgba(235, 11, 38, 1.00)",
-      fontSize:"1.5em",
-      fontFamily:"Open Sans",
-      fontWeight:"300",
-      textAlign:"center",
-      textTransform:"uppercase",
-      width:"200px",
-      height:"75px",
-      marginTop:"30px",
-      background:"rgba(255, 255, 255, 0)",
-      border:"1px solid rgba(189, 190, 192, 1.00)",
-      display:"flex",
-
-    }
-    const inputBox3Mobile={
-      color:"#ffffff",
-      fontSize:"1em",
+      fontSize:"1.25em",
       fontFamily:"Open Sans",
       fontWeight:"400",
+      textAlign:"center center",
+      textTransform:"uppercase",
+      paddingTop:"5px",
+      width:"150px",
+      height:"40px",
+      marginTop:"30px",
+      background:"rgba(255, 255, 255, 1.00)",
+      border:"2px solid rgba(189, 190, 192, 1.00)",
+      display:"flex",
+      justifyContent:"center",
+    }
+    const quoteStyle={
+      color:"rgba(255, 255, 255, 1.00)",
+      fontSize:"3em",
+      fontFamily:"Open Sans",
+      fontWeight:"400",
+      fontStyle:"italic",
       textAlign:"center",
-      width:"100px",
-      height:"50px",
-      marginTop:"15px",
-      background:"rgba(0, 0, 0, 1.00)",
-      border:"1px solid #ffffff",
+    }
+    const quoteStyleMobile={
+      color:"rgba(255, 255, 255, 1.00)",
+      fontSize:"2em",
+      fontFamily:"Open Sans",
+      fontWeight:"400",
+      fontStyle:"italic",
+      textAlign:"center",
+    }
+    const photo2={
+      maxWidth:"50%",
+      height:"auto",
+      display:"flex",
+      flexDirection:"row",
+      justifyContent:"right",
+    }
+    const textStyle={
+      color:"rgba(109, 110, 114, 1.00)",
+      fontSize:"1em",
+      fontFamily:"Open Sans",
+      fontWeight:"300",
+      textAlign:"left",
+    }
+    const headerStyle2={
+      color:"rgba(109, 110, 114, 1.00)",
+      fontSize:"2.5em",
+      fontFamily:"Open Sans",
+      fontWeight:"300",
+      textAlign:"left",
+      textTransform:"uppercase",
+      marginTop:"50px",
+      marginBottom:"30px",
+      letterSpacing:"1.5px"
     }
 
     return (
@@ -242,7 +269,6 @@ export default class Home extends React.PureComponent {
                 </div>
                 <Link style={buttonBox} to= "/Shop"> Shop </Link>
               </div>
-
             </Responsive>
 
             <Responsive maxDeviceWidth={1023}>
@@ -255,9 +281,67 @@ export default class Home extends React.PureComponent {
                   <div style={photoMobile}><img src="http://h4z.it/Image/be49e8_wheels2.jpg"/></div>
                   <div style={photoMobile}><img src="http://h4z.it/Image/be49e8_wheels2.jpg"/></div>
                 </div>
+                <Link style={buttonBox} to= "/Shop"> Shop </Link>
               </div>
             </Responsive>
 
+            <Responsive minDeviceWidth={1024}>
+              <div style={divStyle3}>
+                <div style={quoteStyle}>
+                  "My team is awesome and we love to battle our bots!"<br/>
+                -Mason, age 10</div>
+              </div>
+            </Responsive>
+
+            <Responsive maxDeviceWidth={1023}>
+              <div style={divStyle3Mobile}>
+                <div style={quoteStyleMobile}>
+                  "My team is awesome and we love to battle our bots!"<br/>
+                -Mason, age 10</div>
+              </div>
+            </Responsive>
+
+            <Responsive minDeviceWidth={1024}>
+              <div style={divStyle4}>
+                <div style={{maxWidth:"300px", margin:"0 auto", marginTop:"100px", marginBottom:"15px",
+                }}> <div style={headerStyle2}>
+                  About SLR
+                </div>
+                <div style={textStyle}>
+                  Sumo Robot League is a non-profit robotics curriculum and sports league operated by HACK Augusta. Students design and build robots to compete in fully autonomous sumo wrestling. Each match motivates kids to learn and understand the principles of S.T.E.M. (Science, Technology, Engineering and Math).<br/> For more into click the butttom below.</div>
+                <Link style={buttonBox} to= "/About"> About </Link>
+                </div>
+                <div style={photo2}><img src="http://h4z.it/Image/8bfed1_obot2017-3sm.jpg"/></div>
+              </div>
+            </Responsive>
+
+            <Responsive maxDeviceWidth={1023}>
+              <div style={divStyle4Mobile}>
+                <div style={{maxWidth:"300px", margin:"0 auto", marginTop:"100px", marginBottom:"15px",
+                }}> <div style={headerStyle2}>
+                  About SLR
+                </div>
+                <div style={textStyle}>
+                  Sumo Robot League is a non-profit robotics curriculum and sports league operated by HACK Augusta. Students design and build robots to compete in fully autonomous sumo wrestling. Each match motivates kids to learn and understand the principles of S.T.E.M. (Science, Technology, Engineering and Math).<br/> For more into click the butttom below.</div>
+                <Link style={buttonBox} to= "/About"> About </Link>
+                </div>
+                <div style={photo2}><img src="http://h4z.it/Image/8bfed1_obot2017-3sm.jpg"/></div>
+              </div>
+            </Responsive>
+
+            <Responsive minDeviceWidth={1024}>
+              <div style={divStyle5}>
+                <div style={photo2}><img src="http://h4z.it/Image/8bfed1_obot2017-3sm.jpg"/></div>
+                <div style={{maxWidth:"300px", margin:"0 auto", marginTop:"100px", marginBottom:"15px",
+                }}> <div style={headerStyle2}>
+                  SLR News
+                </div>
+                <div style={textStyle}>
+                  We just came back from a great show in Baltimore, and check out our cool wrap up video!  Sumo Robot League is project based makerspace learning for middle school students in computer science and advanced manufacturing, that grows STEAM skills and computational thinking. Add robotics to your school, camp, or after school program. <br/> For more into click the butttom below.</div>
+                <Link style={buttonBox} to= "/News"> News </Link>
+                </div>
+              </div>
+            </Responsive>
 
 
       </div>
