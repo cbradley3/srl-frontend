@@ -10,6 +10,10 @@
  import {Link} from "react-router";
  import FlatButton from "material-ui/FlatButton";
  import NavBar from 'components/NavBar';
+ import FaFacebook from 'react-icons/lib/fa/facebook';
+ import FaTwitter from 'react-icons/lib/fa/twitter';
+ import FaYoutubePlay from 'react-icons/lib/fa/youtube-play';
+ import FaInstagram from 'react-icons/lib/fa/instagram';
 
 export default class Home extends React.PureComponent {
   render() {
@@ -98,37 +102,40 @@ export default class Home extends React.PureComponent {
     }
     const divStyle6={
       width:"100%",
-      height:"700px",
-      background:"rgba(255, 255, 255, 1.00)",
+      height:"150px",
       display:"flex",
-      flexDirection:"row",
-      justifyContent:"center"
+      flexDirection:"column",
+      alignItems:"center",
+      justifyContent:"center",
+      background:"rgba(235, 11, 38, 1.00)",
     }
     const divStyle6Mobile={
       width:"100%",
-      height:"700px",
-      background:"rgba(255, 255, 255, 1.00)",
+      height:"150px",
       display:"flex",
-      flexDirection:"row",
+      flexDirection:"column",
+      alignItems:"center",
       justifyContent:"center",
+      background:"rgba(235, 11, 38, 1.00)",
+
     }
     const divStyle7={
       width:"100%",
-      height:"600px",
-      background:"url(http://h4z.it/Image/645fa8_IMG_9509rev.jpg)",
-      backgroundSize:"cover",
-      backgroundAttachment:"fixed",
-      backgroundPosition:"center",
-      backgroundRepeat:"no-repeat"
+      height:"300px",
+      display:"flex",
+      flexDirection:"column",
+      alignItems:"center",
+      justifyContent:"center",
+      background:"rgba(189, 190, 192, 1.00)",
     }
     const divStyle7Mobile={
       width:"100%",
-      height:"450px",
-      background:"url(http://h4z.it/Image/645fa8_IMG_9509rev.jpg)",
-      backgroundSize:"cover",
-      backgroundAttachment:"fixed",
-      backgroundPosition:"center",
-      backgroundRepeat:"no-repeat"
+      height:"300px",
+      display:"flex",
+      flexDirection:"column",
+      alignItems:"center",
+      justifyContent:"center",
+      background:"rgba(189, 190, 192, 1.00)",
     }
     const headerStyle={
       color:"rgba(109, 110, 114, 1.00)",
@@ -228,7 +235,7 @@ export default class Home extends React.PureComponent {
       textAlign:"left",
     }
     const headerStyle2={
-      color:"rgba(109, 110, 114, 1.00)",
+      color:"rgba(235, 11, 38, 1.00)",
       fontSize:"2.5em",
       fontFamily:"Open Sans",
       fontWeight:"300",
@@ -237,6 +244,11 @@ export default class Home extends React.PureComponent {
       marginTop:"50px",
       marginBottom:"30px",
       letterSpacing:"1.5px"
+    }
+    const iconStyle={
+      color:"rgba(255, 255, 255, 1.00)",
+      fontSize:"4em",
+      paddingLeft:"20px",
     }
 
     return (
@@ -305,10 +317,10 @@ export default class Home extends React.PureComponent {
               <div style={divStyle4}>
                 <div style={{maxWidth:"300px", margin:"0 auto", marginTop:"100px", marginBottom:"15px",
                 }}> <div style={headerStyle2}>
-                  About SLR
+                  About SRL
                 </div>
                 <div style={textStyle}>
-                  Sumo Robot League is a non-profit robotics curriculum and sports league operated by HACK Augusta. Students design and build robots to compete in fully autonomous sumo wrestling. Each match motivates kids to learn and understand the principles of S.T.E.M. (Science, Technology, Engineering and Math).<br/> For more into click the butttom below.</div>
+                  Sumo Robot League is a non-profit robotics curriculum and sports league operated by HACK Augusta. Students design and build robots to compete in fully autonomous sumo wrestling. Each match motivates kids to learn and understand the principles of S.T.E.M. (Science, Technology, Engineering and Math).<br/> For more info click the butttom below.</div>
                 <Link style={buttonBox} to= "/About"> About </Link>
                 </div>
                 <div style={photo2}><img src="http://h4z.it/Image/8bfed1_obot2017-3sm.jpg"/></div>
@@ -319,10 +331,10 @@ export default class Home extends React.PureComponent {
               <div style={divStyle4Mobile}>
                 <div style={{maxWidth:"300px", margin:"0 auto", marginTop:"100px", marginBottom:"15px",
                 }}> <div style={headerStyle2}>
-                  About SLR
+                  About SRL
                 </div>
                 <div style={textStyle}>
-                  Sumo Robot League is a non-profit robotics curriculum and sports league operated by HACK Augusta. Students design and build robots to compete in fully autonomous sumo wrestling. Each match motivates kids to learn and understand the principles of S.T.E.M. (Science, Technology, Engineering and Math).<br/> For more into click the butttom below.</div>
+                  Sumo Robot League is a non-profit robotics curriculum and sports league operated by HACK Augusta. Students design and build robots to compete in fully autonomous sumo wrestling. Each match motivates kids to learn and understand the principles of S.T.E.M. (Science, Technology, Engineering and Math).<br/> For more info click the butttom below.</div>
                 <Link style={buttonBox} to= "/About"> About </Link>
                 </div>
                 <div style={photo2}><img src="http://h4z.it/Image/8bfed1_obot2017-3sm.jpg"/></div>
@@ -331,15 +343,59 @@ export default class Home extends React.PureComponent {
 
             <Responsive minDeviceWidth={1024}>
               <div style={divStyle5}>
-                <div style={photo2}><img src="http://h4z.it/Image/8bfed1_obot2017-3sm.jpg"/></div>
+                <div style={photo2}><img src="http://h4z.it/Image/d270f8_obot2017-2sm.jpg"/></div>
                 <div style={{maxWidth:"300px", margin:"0 auto", marginTop:"100px", marginBottom:"15px",
                 }}> <div style={headerStyle2}>
-                  SLR News
+                  SRL News
                 </div>
                 <div style={textStyle}>
-                  We just came back from a great show in Baltimore, and check out our cool wrap up video!  Sumo Robot League is project based makerspace learning for middle school students in computer science and advanced manufacturing, that grows STEAM skills and computational thinking. Add robotics to your school, camp, or after school program. <br/> For more into click the butttom below.</div>
+                  We just came back from a great show in Baltimore, and check out our cool wrap up video!  Sumo Robot League is project based makerspace learning for middle school students in computer science and advanced manufacturing, that grows STEAM skills and computational thinking. Add robotics to your school, camp, or after school program. <br/> For more info click the butttom below.</div>
                 <Link style={buttonBox} to= "/News"> News </Link>
                 </div>
+              </div>
+            </Responsive>
+
+            <Responsive maxDeviceWidth={1023}>
+              <div style={divStyle5Mobile}>
+                <div style={photo2}><img src="http://h4z.it/Image/d270f8_obot2017-2sm.jpg"/></div>
+                <div style={{maxWidth:"300px", margin:"0 auto", marginTop:"100px", marginBottom:"15px",
+                }}> <div style={headerStyle2}>
+                  SRL News
+                </div>
+                <div style={textStyle}>
+                  We just came back from a great show in Baltimore, and check out our cool wrap up video!  Sumo Robot League is project based makerspace learning for middle school students in computer science and advanced manufacturing, that grows STEAM skills and computational thinking. Add robotics to your school, camp, or after school program. <br/> For more info click the butttom below.</div>
+                <Link style={buttonBox} to= "/News"> News </Link>
+                </div>
+              </div>
+            </Responsive>
+
+            <Responsive minDeviceWidth={1024}>
+              <div style={divStyle6}>
+                <div>
+                  <a style={iconStyle} href= "https://www.facebook.com/SumoRobotLeague/"><FaFacebook/></a>
+                  <a style={iconStyle} href= "https://twitter.com/SumoRobotLeague"><FaTwitter/></a>
+                  <a style={iconStyle} href= "https://www.youtube.com/channel/UC0WCv8s-wjs_T7GnELdtvow"><FaYoutubePlay/></a>
+                  <a style={iconStyle} href= "https://www.instagram.com/explore/tags/sumorobotleague/"><FaInstagram/></a>
+                </div>
+              </div>
+            </Responsive>
+
+            <Responsive maxDeviceWidth={1023}>
+              <div style={divStyle6Mobile}>
+
+              </div>
+            </Responsive>
+
+            <Responsive minDeviceWidth={1024}>
+              <div style={divStyle7}>
+
+
+              </div>
+            </Responsive>
+
+            <Responsive maxDeviceWidth={1023}>
+              <div style={divStyle7Mobile}>
+
               </div>
             </Responsive>
 
