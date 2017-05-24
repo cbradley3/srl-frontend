@@ -79,11 +79,11 @@ export default class Home extends React.PureComponent {
     }
     const divStyle4Mobile={
       width:"100%",
-      height:"600px",
+      height:"auto",
       background:"rgba(255, 255, 255, 1.00)",
       display:"flex",
       flexDirection:"column",
-      justifyContent:"center",
+      alignItems:"center",
     }
     const divStyle5={
       width:"100%",
@@ -94,11 +94,11 @@ export default class Home extends React.PureComponent {
     }
     const divStyle5Mobile={
       width:"100%",
-      height:"600px",
+      height:"auto",
       background:"rgba(255, 255, 255, 1.00)",
       display:"flex",
       flexDirection:"column",
-      justifyContent:"center",
+      alignItems:"center",
     }
     const divStyle6={
       width:"100%",
@@ -180,11 +180,8 @@ export default class Home extends React.PureComponent {
       height:"auto",
     }
       const photoMobile={
-        WebkitBoxFlex:"auto",
-        msFlex:"auto",
         flex:"auto",
-        maxWidth:"50%",
-        height:"auto",
+        maxWidth:"100%",
         margin:".5vw",
         marginBottom:"20px"
     }
@@ -221,11 +218,18 @@ export default class Home extends React.PureComponent {
       textAlign:"center",
     }
     const photo2={
-      maxWidth:"50%",
+      maxWidth:"100%",
       height:"auto",
       display:"flex",
       flexDirection:"row",
       justifyContent:"right",
+    }
+    const photo2Mobile={
+      maxWidth:"100%",
+      display:"flex",
+      flexDirection:"column",
+      justifyContent:"center",
+      alignItems:"center",
     }
     const textStyle={
       color:"rgba(109, 110, 114, 1.00)",
@@ -249,6 +253,11 @@ export default class Home extends React.PureComponent {
       color:"rgba(255, 255, 255, 1.00)",
       fontSize:"4em",
       paddingLeft:"20px",
+    }
+    const iconStyleMobile={
+      color:"rgba(255, 255, 255, 1.00)",
+      fontSize:"3em",
+      paddingRight:"20px",
     }
 
     return (
@@ -323,13 +332,14 @@ export default class Home extends React.PureComponent {
                   Sumo Robot League is a non-profit robotics curriculum and sports league operated by HACK Augusta. Students design and build robots to compete in fully autonomous sumo wrestling. Each match motivates kids to learn and understand the principles of S.T.E.M. (Science, Technology, Engineering and Math).<br/> For more info click the butttom below.</div>
                 <Link style={buttonBox} to= "/About"> About </Link>
                 </div>
-                <div style={photo2}><img src="http://h4z.it/Image/8bfed1_obot2017-3sm.jpg"/></div>
+                <div style={photo2}><img src="http://h4z.it/Image/78aa3c_obot2017-3sm.jpg"/></div>
               </div>
             </Responsive>
 
             <Responsive maxDeviceWidth={1023}>
               <div style={divStyle4Mobile}>
-                <div style={{maxWidth:"300px", margin:"0 auto", marginTop:"100px", marginBottom:"15px",
+                <div style={photo2Mobile}><img src="http://h4z.it/Image/78aa3c_obot2017-3sm.jpg"/></div>
+                <div style={{maxWidth:"250px", margin:"0 auto", marginTop:"30px", marginBottom:"30px",
                 }}> <div style={headerStyle2}>
                   About SRL
                 </div>
@@ -337,13 +347,12 @@ export default class Home extends React.PureComponent {
                   Sumo Robot League is a non-profit robotics curriculum and sports league operated by HACK Augusta. Students design and build robots to compete in fully autonomous sumo wrestling. Each match motivates kids to learn and understand the principles of S.T.E.M. (Science, Technology, Engineering and Math).<br/> For more info click the butttom below.</div>
                 <Link style={buttonBox} to= "/About"> About </Link>
                 </div>
-                <div style={photo2}><img src="http://h4z.it/Image/8bfed1_obot2017-3sm.jpg"/></div>
               </div>
             </Responsive>
 
             <Responsive minDeviceWidth={1024}>
               <div style={divStyle5}>
-                <div style={photo2}><img src="http://h4z.it/Image/d270f8_obot2017-2sm.jpg"/></div>
+                <div style={photo2}><img src="http://h4z.it/Image/549da7_obot2017-2sm.jpg"/></div>
                 <div style={{maxWidth:"300px", margin:"0 auto", marginTop:"100px", marginBottom:"15px",
                 }}> <div style={headerStyle2}>
                   SRL News
@@ -357,8 +366,8 @@ export default class Home extends React.PureComponent {
 
             <Responsive maxDeviceWidth={1023}>
               <div style={divStyle5Mobile}>
-                <div style={photo2}><img src="http://h4z.it/Image/d270f8_obot2017-2sm.jpg"/></div>
-                <div style={{maxWidth:"300px", margin:"0 auto", marginTop:"100px", marginBottom:"15px",
+                <div style={photo2Mobile}><img src="http://h4z.it/Image/549da7_obot2017-2sm.jpg"/></div>
+                <div style={{maxWidth:"250px", margin:"0 auto", marginTop:"30px", marginBottom:"30px",
                 }}> <div style={headerStyle2}>
                   SRL News
                 </div>
@@ -382,6 +391,12 @@ export default class Home extends React.PureComponent {
 
             <Responsive maxDeviceWidth={1023}>
               <div style={divStyle6Mobile}>
+                <div>
+                  <a style={iconStyleMobile} href= "https://www.facebook.com/SumoRobotLeague/"><FaFacebook/></a>
+                  <a style={iconStyleMobile} href= "https://twitter.com/SumoRobotLeague"><FaTwitter/></a>
+                  <a style={iconStyleMobile} href= "https://www.youtube.com/channel/UC0WCv8s-wjs_T7GnELdtvow"><FaYoutubePlay/></a>
+                  <a style={iconStyleMobile} href= "https://www.instagram.com/explore/tags/sumorobotleague/"><FaInstagram/></a>
+                </div>
 
               </div>
             </Responsive>
