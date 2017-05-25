@@ -33,7 +33,7 @@ export default class Home extends React.PureComponent {
       var data = new FormData ();
       data.append("email", this.state.email);
 
-    fetch("http://localhost:8000/api/storeContact",{
+    fetch("http://localhost:8000/api/storeEmail",{
       method:"post",
       body:data
     })
@@ -66,7 +66,7 @@ export default class Home extends React.PureComponent {
     }
     const divStyleMobile={
       width:"100%",
-      height:"500px",
+      height:"700px",
       background:"url(http://h4z.it/Image/e97237_oRobot2017-5.jpg)",
       backgroundSize:"cover",
       backgroundAttachment:"fixed",
@@ -341,6 +341,7 @@ export default class Home extends React.PureComponent {
       width:"150px",
       height:"40px",
       marginTop:"10px",
+      marginBottom:"50px",
       background:"rgba(189, 190, 192, 1.00)",
       border:"2px solid rgba(109, 110, 114, 1.00)",
       display:"flex",
@@ -495,6 +496,8 @@ export default class Home extends React.PureComponent {
               <div style={contactLeft}>
                   <label style={textStyle}>SUBSCRIBE FOR UPDATES<input type="text" style={inputBox} value={this.state.email} placeholder=" Email Address"/> </label>
                   <input onTouchTap = {this.storeContact} type="submit" placeholder="Send Message" style={buttonBox2}/>
+
+                  &copy; 2017<script>new Date().getFullYear()>2017&&document.write("-"+new Date().getFullYear());</script>, Sumo Robot League.<br/>Proudly designed by <a href="http://cb-iii.com">Charlie Bradley III</a>
               </div>
               </div>
             </div>
@@ -502,10 +505,19 @@ export default class Home extends React.PureComponent {
 
           <Responsive maxDeviceWidth={1023}>
             <div style={divStyle7Mobile}>
+              <div style={divStyle7}>
+                <div style={{maxWidth:"320px", margin:"0 auto", marginTop:"30px", marginBottom:"30px",
+                }}>
+                <div style={contactLeft}>
+                    <label style={textStyle}>SUBSCRIBE FOR UPDATES<input type="text" style={inputBox} value={this.state.email} placeholder=" Email Address"/> </label>
+                    <input onTouchTap = {this.storeContact} type="submit" placeholder="Send Message" style={buttonBox2}/>
 
+                    &copy; 2017<script>new Date().getFullYear()>2017&&document.write("-"+new Date().getFullYear());</script>, Sumo Robot League.<br/>Proudly designed by <a href="http://cb-iii.com">Charlie Bradley III</a>
+                </div>
+                </div>
+              </div>
             </div>
           </Responsive>
-
 
       </div>
     );

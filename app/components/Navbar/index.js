@@ -125,7 +125,8 @@ class Navbar extends React.PureComponent {
     const logoStyle={
       marginTop:"20px",
       height:"75px",
-      width:"auto"
+      width:"auto",
+      marginRight:"20px",
     }
     const linkStyle2={
       display:"flex",
@@ -146,11 +147,23 @@ class Navbar extends React.PureComponent {
         height:"auto",
         display:"flex",
         flexDirection:"row",
-        justifyContent:"center center",
-
-
-
+        justifyContent:"space-between",
+        position:"fixed",
+        top:"0",
+        left:"0",
+        background:"#ffffff",
+        zIndex:"99999"
     }
+      const colorBox={
+        width:"100px",
+        height:"100px",
+        background:"rgba(235, 11, 38, 1.00)",
+        color:"rgba(255, 255, 255, 1.00)",
+        display:"flex",
+        flexDirection:"row",
+        alignItems:"right",
+      }
+
     var dashLink = <Link style={linkStyle2} to="/Dashboard">Dashboard</Link>;
     var signUpLink = <Link to="/SignUp" style={linkStyle2}>Sign Up</Link>;
     var signInLink = <Link to="/SignIn" style={linkStyle2}>Sign In</Link>;
@@ -170,7 +183,7 @@ class Navbar extends React.PureComponent {
       <div style={divStyle2Mobile}>
         <Responsive minDeviceWidth={1024}>
           <div style={headStyle}>
-            <img style={logoStyle} src="http://h4z.it/Image/681c4a_SRL_logo.png"/>
+            <img style={logoStyle} src="http://h4z.it/Image/c4604f_RL_logo_long.png"/>
             <nav style={navStyle2}>
               <Link style={linkStyle2} to= "/"> Home </Link>
               <Link style={linkStyle2} to= "/About"> About </Link>
@@ -180,6 +193,8 @@ class Navbar extends React.PureComponent {
               {signUpLink}
               {signInLink}
               {dashLink}
+              <div style={colorBox}></div>
+
 
             </nav>
           </div>
