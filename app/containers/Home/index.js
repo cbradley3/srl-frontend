@@ -63,6 +63,7 @@ export default class Home extends React.PureComponent {
       backgroundAttachment:"fixed",
       backgroundPosition:"center",
       backgroundRepeat:"no-repeat",
+      zIndex:"999999",
     }
     const divStyleMobile={
       width:"100%",
@@ -79,6 +80,8 @@ export default class Home extends React.PureComponent {
       flexDirection:"column",
       alignItems:"center",
       justifyContent:"center",
+      background:"rgba(255, 255, 255, 1.00)",
+      height:"500px",
     }
     const divStyle2Mobile={
       width:"100%",
@@ -86,6 +89,8 @@ export default class Home extends React.PureComponent {
       flexDirection:"column",
       alignItems:"center",
       justifyContent:"center",
+      background:"rgba(255, 255, 255, 1.00)",
+      height:"auto",
 
     }
     const divStyle3={
@@ -420,13 +425,13 @@ export default class Home extends React.PureComponent {
                 Sumo Robot League is a non-profit robotics curriculum and sports league operated by HACK Augusta. Students design and build robots to compete in fully autonomous sumo wrestling. Each match motivates kids to learn and understand the principles of S.T.E.M. (Science, Technology, Engineering and Math).<br/> For more info click the butttom below.</div>
               <Link style={buttonBox} to= "/About"> About </Link>
               </div>
-              <div style={photo2}><img src="http://h4z.it/Image/78aa3c_obot2017-3sm.jpg"/></div>
+              <div style={photo2}><img src="http://h4z.it/Image/eabe00_obot2017-3sm.jpg"/></div>
             </div>
           </Responsive>
 
           <Responsive maxDeviceWidth={1023}>
             <div style={divStyle4Mobile}>
-              <div style={photo2Mobile}><img src="http://h4z.it/Image/78aa3c_obot2017-3sm.jpg"/></div>
+              <div style={photo2Mobile}><img src="http://h4z.it/Image/eabe00_obot2017-3sm.jpg"/></div>
               <div style={{maxWidth:"250px", margin:"0 auto", marginTop:"30px", marginBottom:"30px",
               }}> <div style={headerStyle2}>
                 About SRL
@@ -440,7 +445,7 @@ export default class Home extends React.PureComponent {
 
           <Responsive minDeviceWidth={1024}>
             <div style={divStyle5}>
-              <div style={photo2}><img src="http://h4z.it/Image/549da7_obot2017-2sm.jpg"/></div>
+              <div style={photo2}><img src="http://h4z.it/Image/c1e7e8_obot2017-2sm.jpg"/></div>
               <div style={{maxWidth:"300px", margin:"0 auto", marginTop:"100px", marginBottom:"15px",
               }}> <div style={headerStyle2}>
                 SRL News
@@ -454,7 +459,7 @@ export default class Home extends React.PureComponent {
 
           <Responsive maxDeviceWidth={1023}>
             <div style={divStyle5Mobile}>
-              <div style={photo2Mobile}><img src="http://h4z.it/Image/549da7_obot2017-2sm.jpg"/></div>
+              <div style={photo2Mobile}><img src="http://h4z.it/Image/c1e7e8_obot2017-2sm.jpg"/></div>
               <div style={{maxWidth:"250px", margin:"0 auto", marginTop:"30px", marginBottom:"30px",
               }}> <div style={headerStyle2}>
                 SRL News

@@ -104,7 +104,8 @@ class Navbar extends React.PureComponent {
     const navStyle2={
       display:"flex",
       flexDirection:"row",
-      justifyContent:"center",
+      justifyContent:"space-between",
+      width:"100%",
       height:"100px",
       alignItems:"center",
       textDecoration:"none",
@@ -118,15 +119,16 @@ class Navbar extends React.PureComponent {
       letterSpacing:"2px",
     }
     const headStyle={
+      width:"100%",
       display:"flex",
       flexDirection:"row",
-      justifyContent:"center"
+      justifyContent:"space-between"
     }
     const logoStyle={
       marginTop:"20px",
       height:"75px",
       width:"auto",
-      marginRight:"20px",
+      marginRight:"75px",
     }
     const linkStyle2={
       display:"flex",
